@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/guo-jing/GG/issues"
   },
-  "homepage": "https://github.com/guo-jing/GG#readme"
+  "homepage": "https://github.com/guo-jing/GG#readme",
+  "dependencies": {
+    "vue": "^2.6.6"
+  }
 }
