@@ -6,5 +6,10 @@ Vue.component('gg-button', Button);
 Vue.component('gg-icon', Icon);
 
 new Vue({
-    el: "#app"
+    el: "#app",
+    data: {
+        loading1: false,
+        loading2: true,
+        loading3: false
+    }
 });

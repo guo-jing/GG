@@ -35,13 +35,15 @@
 </head>
 <body>
 <div id="app">
-    <gg-button>
+    <gg-button :loading="loading1" @click="loading1 = !loading1">
         按钮
     </gg-button>
-    <gg-button icon="settings">
+    <gg-button icon="settings" :loading="loading2"
+               @click="loading2 = !loading2">
         按钮
     </gg-button>
-    <gg-button icon="settings" icon-position="right">
+    <gg-button icon="settings" icon-position="right" :loading="loading3"
+               @click="loading3 = !loading3">
         按钮
     </gg-button>
     <gg-icon name="download"></gg-icon>
