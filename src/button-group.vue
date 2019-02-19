@@ -6,7 +6,14 @@
 
 <script>
     export default {
-        name: "button-group"
+        mounted() {
+            for (let node of this.$el.children) {
+                let name = node.nodeName.toLowerCase();
+                if (name !== 'button') {
+                    console.warn(`gg-button-group 的子元素只能为 gg-button ，而你使用了 ${name}`);
+                }
+            }
+        }
     }
 </script>
 
