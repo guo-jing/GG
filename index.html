@@ -38,14 +38,65 @@
     <title>GG</title>
 </head>
 <body>
+<style>
+    .row {
+        display: flex;
+    }
+
+    .col {
+        height: 100px;
+        background-color: grey;
+        width: 50%;
+        border: 1px solid red;
+    }
+
+    .col[data-span="2"] {
+        width: 8.333333%;
+    }
+
+    .col[data-span="22"] {
+        width: 91.666667%;
+    }
+</style>
 <div id="app">
+    <div class="box">
+        <gg-row>
+            <gg-col>1</gg-col>
+            <gg-col>2</gg-col>
+        </gg-row>
+
+        <gg-row>
+            <gg-col>1</gg-col>
+            <gg-col>2</gg-col>
+            <gg-col>3</gg-col>
+        </gg-row>
+
+        <gg-row>
+            <gg-col>1</gg-col>
+            <gg-col>2</gg-col>
+            <gg-col>3</gg-col>
+            <gg-col>4</gg-col>
+        </gg-row>
+
+        <gg-row>
+            <gg-col span="2">1</gg-col>
+            <gg-col span="22">2</gg-col>
+        </gg-row>
+
+        <gg-row>
+            <gg-col span="4">1</gg-col>
+            <gg-col span="20">2</gg-col>
+        </gg-row>
+    </div>
+
     <div class="box">
         <gg-input value="张三" disabled></gg-input>
         <gg-input value="李四" readonly></gg-input>
-        <gg-input v-model="message" @change="inputChange"></gg-input>
+        <gg-input v-model="message"></gg-input>
         <span>{{message}}</span>
         <gg-button @click="message+='1'">+1</gg-button>
     </div>
+
     <div class="box">
         <gg-input value="王" error="姓名不能少于2个字"></gg-input>
     </div>
