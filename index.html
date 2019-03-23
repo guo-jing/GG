@@ -38,47 +38,35 @@
     <title>GG</title>
 </head>
 <body>
+<style>
+    .demo {
+        background: #dddddd;
+        border: 1px solid #666666;
+        height: 100px;
+    }
+</style>
 <div id="app">
     <div class="box" style="border: 1px solid black">
-        <gg-row gutter="20">
-            <gg-col span="24"
-                    :ipad="{span: 8}"
-                    :narrow-pc="{span: 4}"
-                    :pc="{span: 2}"
-                    :wide-pc="{span: 1}">
-                1
+        <gg-row>
+            <gg-col span="24" :narrow-pc="{span: 8}">
+                <div class="demo"></div>
             </gg-col>
-            <gg-col span="24"
-                    :ipad="{span: 16}"
-                    :narrow-pc="{span: 20}"
-                    :pc="{span: 22}"
-                    :wide-pc="{span: 23}"
-            >
-                2
+            <gg-col span="24" :narrow-pc="{span: 8}">
+                <div class="demo"></div>
+            </gg-col>
+            <gg-col span="24" :narrow-pc="{span: 8}">
+                <div class="demo"></div>
+            </gg-col>
+            <gg-col span="24" :narrow-pc="{span: 8}">
+                <div class="demo"></div>
+            </gg-col>
+            <gg-col span="24" :narrow-pc="{span: 8}">
+                <div class="demo"></div>
+            </gg-col>
+            <gg-col span="24" :narrow-pc="{span: 8}">
+                <div class="demo"></div>
             </gg-col>
         </gg-row>
-
-        <!--<gg-row gutter="20">-->
-            <!--<gg-col span="4">1</gg-col>-->
-            <!--<gg-col span="20">2</gg-col>-->
-        <!--</gg-row>-->
-
-        <!--<gg-row gutter="20">-->
-            <!--<gg-col span="4">1</gg-col>-->
-            <!--<gg-col span="18" offset="2">2</gg-col>-->
-        <!--</gg-row>-->
-
-        <!--<gg-row gutter="20">-->
-            <!--<gg-col span="4">1</gg-col>-->
-            <!--<gg-col span="8" offset="2">2</gg-col>-->
-            <!--<gg-col span="8" offset="2">2</gg-col>-->
-        <!--</gg-row>-->
-
-        <!--<gg-row gutter="20">-->
-            <!--<gg-col span="4">1</gg-col>-->
-            <!--<gg-col span="4" offset="6">2</gg-col>-->
-            <!--<gg-col span="8" offset="2">2</gg-col>-->
-        <!--</gg-row>-->
     </div>
 
     <div class="box">
