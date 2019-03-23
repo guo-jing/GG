@@ -1,6 +1,5 @@
 <template>
-    <div class="row" :style="rolStyle"
-    :style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}">
+    <div class="row" :style="rolStyle" :class="rowClass">
         <slot></slot>
     </div>
 </template>
@@ -10,12 +9,22 @@
         props: {
             gutter: {
                 type: [Number, String]
+            },
+            align: {
+                type: String,
+                validator(value) {
+                    return ['left', 'right', 'center'].includes(value);
+                }
             }
         },
         computed: {
             rolStyle() {
                 let {gutter} = this;
                 return {marginLeft: -gutter/2 + 'px', marginRight: -gutter/2 + 'px'}
+            },
+            rowClass() {
+                let {align} = this;
+                return [align && `align-${align}`];
             }
         },
         mounted() {
@@ -28,5 +37,14 @@
 <style scoped lang="scss">
     .row {
         display: flex;
+        &.align-left {
+            justify-content: flex-start;
+        }
+        &.align-right {
+            justify-content: flex-end;
+        }
+        &.align-center {
+            justify-content: center;
+        }
     }
 </style>
