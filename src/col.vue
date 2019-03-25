@@ -115,7 +115,7 @@
                 }
             }
 
-            $class-prefix: offset-narow-pc-;
+            $class-prefix: offset-narrow-pc-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
                     margin-left: ($n / 24) * 100%;
